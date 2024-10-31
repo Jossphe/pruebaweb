@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubuntu Server - Instalación</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3 shadow-sm">
+        <div class="container-fluid">
+            <!-- Logotipo -->
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="documents/image/linux1.png" alt="Logo" width="40" height="40" class="me-2">
+                <span class="fw-bold fs-5">HOME</span>
+            </a>
+            
+            <!-- Botón de menú colapsable para móviles -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Elementos de navegación -->
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="acerca_de.html">Acerca de</a></li>
+                    <li class="nav-item"><a class="nav-link" href="caracteristicas.html">Características</a></li>
+                    <li class="nav-item"><a class="nav-link" href="instalacion.html">Instalación</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                </ul>
+                <!-- Texto y redes sociales -->
+                <span class="navbar-text me-3">
+                    Linuxeros de corazón
+                </span>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/share/2zkU2MdrWBZPNp9c/" target="_blank" class="text-light me-2"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.linkedin.com/in/jos%C3%A9-mendoza-9bb8512b9" target="_blank" class="text-light me-2"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://www.instagram.com/josphe_men/profilecard/?igsh=MWh3YjJkdWYzdjZxNg==" target="_blank" class="text-light"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+      <div class="container">
+            <section>
+                <h2>Instalación de Ubuntu Server.</h2>
+                <div class="video-header">
+                    <video autoplay muted loop>
+                        <source src="documents/image/gift-Ubuntu.mp4" type="video/mp4">
+                        Tu navegador no soporta la reproducción de videos HTML5.
+                    </video>
+                    <div class="video-overlay"></div>
+                </div>
+                <h3>Requisitos de instalación.</h3>
+                <p>Ubuntu es un sistema operativo inherentemente liviano, capaz de ejecutarse en hardware
+                    bastante obsoleto. Canonical (los desarrolladores de Ubuntu) incluso afirma que, en general, una
+                    máquina que puede ejecutar Windows XP, Vista, Windows 7 o x86 OS X podrá ejecutar Ubuntu
+                    22.04 incluso más rápido.
+                </p>
+                    <p><strong>Requisitos del sistema para el escritorio Ubuntu 22.04</strong></p>
+                    <p>Ubuntu Desktop tendrá requisitos mínimos más altos que la edición Server de Ubuntu, ya
+                        que la versión de escritorio también debe ejecutar una interfaz gráfica de usuario. Los requisitos
+                        del sistema a continuación son para el entorno de escritorio GNOME, que es la GUI
+                        predeterminada en Ubuntu 22.04.
+                    </p>
+                        <p>Esto es lo que Canonical enumera como requisitos mínimos recomendados del sistema
+                            para instalar la edición de escritorio de Ubuntu 22.04. Debemos tener en cuenta que esto se
+                            refiere a instalaciones físicas. Las instalaciones virtualizadas pueden funcionar con menos.
+                        </p>
+                <ol>
+                    <li>Procesador de doble núcleo de 2 GHz</li>
+                    <li>4 GiB de RAM (memoria del sistema)</li>
+                    <li>25 GB de espacio en el disco duro (o memoria USB, tarjeta de memoria o disco
+                        externo, pero consulte LiveCD para conocer un enfoque alternativo).
+                    </li>
+                    <li>VGA con capacidad para una resolución de pantalla de 1024×768</li>
+                    <li>Ya sea una unidad de CD/DVD o un puerto USB para el medio de instalación</li>
+                    <li>El acceso a Internet es útil</li>
+                    <li>Recomendado: Tarjeta de video con capacidad de aceleración 3D con al menos
+                        256 MB.
+                    </li>
+                </ol>
+                <p><strong>Requisitos del sistema para el escritorio virtualizado Ubuntu 22.04.</strong></p>
+                <p>Si está instalando Ubuntu 22.04 en un entorno virtual, Canonical dice que su sistema sólo
+                    necesita 2 GiB de RAM para funcionar cómodamente. Su página no menciona los requisitos de
+                    CPU o almacenamiento, estos requisitos son para instalar Ubuntu 22.04 (edición de escritorio) en
+                    una máquina virtual:
+                </p>
+                <ol>
+                    <li>Procesador de un solo núcleo de 2 GHz</li>
+                    <li>2 GiB de RAM (memoria del sistema).</li>
+                    <li>25 GB de espacio en disco duro.</li>
+                </ol>
+                <p>
+                    <strong>NOTA: </strong>También es recomendable dedicar 128 MB de memoria de vídeo a tu máquina
+                    virtual Ubuntu. Si es posible, dedicar un núcleo de CPU adicional, y un GB adicional de RAM
+                    aumentará en gran medida la capacidad de respuesta de su máquina virtual, pero no es
+                    estrictamente necesario.<br>
+                    <strong>VirtualBox: y otros programas de virtualización suelen recomendar 1 GiB de RAM
+                        para instalaciones de Ubuntu.</strong>
+                </p>
+                <h3>Manula de instalacion</h3>
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <p>Manula debidamente desarrollado por alumnos de la Universidad Dr. Andres Bello Regional Sonsonate, en la catedra Sistemas Operativos 2, en el ciclo 01-2024</p>
+                    <p><strong>Descarga el manual</strong></p>
+                    <a href="documents/PDF~S/MANUAL DE INSTALACION DE UBUNTU SERVER.pdf" class="btn btn-primary" target="_blank" role="button">
+                        Descargar Manual de instalacion.
+                    </a>
+                </div>
+                
+            </section>
+        </div>
+
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <!-- Sección de información general -->
+                <div class="col-md-4">
+                    <h5>Acerca de nosotros</h5>
+                    <p>Estudiantes de la Universidad Dr. Andres Bello, aficionados por la tecnologia, y el entuciazmo de compartir conocimientos adquiridos a con la sociedad.</p>
+                </div>
+                <!-- Sección de enlaces de desplzamiento -->
+                <div class="col-md-4">
+                    <h5>Enlaces</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light">Inicio</a></li>
+                        <li><a href="acerca_de.html" class="text-light">Acerca de</a></li>
+                        <li><a href="caracteristicas.html" class="text-light">Características</a></li>
+                        <li><a href="contacto.html" class="text-light">Contacto</a></li>
+                    </ul>
+                </div>
+                <!-- Sección de redes sociales -->
+                <div class="col-md-4">
+                    <h5>Síguenos</h5>
+                    <a href="https://facebook.com" target="_blank" class="text-light me-3">
+                        <i class="bi bi-facebook"></i>facebook
+                    </a>
+                    <a href="https://instagram.com" target="_blank" class="text-light me-3">
+                        <i class="bi bi-instagram"></i>Instagram
+                    </a>
+                    <a href="mailto:tucorreo@gmail.com" target="_blank" class="text-light me-3">
+                        <i class="bi bi-envelope-fill"></i>Gmail<br>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" class="text-light">
+                        <i class="bi bi-linkedin"></i>Linkedin
+                    </a>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col text-center">
+                    <p class="mb-0">&copy; 2024 Creado por José Mendoza. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="Jb/scrip.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
